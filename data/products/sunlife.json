@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Sun Life Term Life",
+    "product_type": "term_life",
+    "description": "Affordable life insurance protection for a specific period. Choose 10, 15, 20, or 30-year terms.",
+    "min_coverage": 50000,
+    "max_coverage": 10000000,
+    "features": [
+      "Renewable to age 85 without medical exam",
+      "Convertible to permanent insurance",
+      "Living Benefit - access up to 50% if diagnosed with terminal illness",
+      "Children's coverage rider available",
+      "Accidental death benefit rider available"
+    ],
+    "exclusions": [
+      "Suicide within first 2 years",
+      "Death during commission of a crime",
+      "Material misrepresentation on application"
+    ],
+    "waiting_period": "None for natural death",
+    "renewable": true,
+    "convertible": true,
+    "premium_range": "$15-$150/month typical",
+    "url": "https://www.sunlife.ca/en/insurance/life-insurance/term-life-insurance/"
+  },
+  {
+    "name": "Sun Life Whole Life",
+    "product_type": "whole_life",
+    "description": "Permanent life insurance with guaranteed cash value growth and lifetime coverage.",
+    "min_coverage": 25000,
+    "max_coverage": 5000000,
+    "features": [
+      "Lifetime coverage - never expires",
+      "Guaranteed cash value growth",
+      "Potential for policy dividends",
+      "Tax-advantaged growth",
+      "Loan against cash value"
+    ],
+    "exclusions": [
+      "Suicide within first 2 years",
+      "Material misrepresentation"
+    ],
+    "waiting_period": "None",
+    "renewable": false,
+    "convertible": false,
+    "premium_range": "$100-$500/month typical",
+    "url": "https://www.sunlife.ca/en/insurance/life-insurance/permanent-life-insurance/"
+  },
+  {
+    "name": "Sun Life Critical Illness",
+    "product_type": "critical_illness",
+    "description": "Lump-sum benefit if diagnosed with a covered critical illness. 26 conditions covered.",
+    "min_coverage": 10000,
+    "max_coverage": 2000000,
+    "features": [
+      "26 covered conditions",
+      "Lump sum payment - use for any purpose",
+      "Return of premium option",
+      "Second event coverage available",
+      "Children's critical illness rider"
+    ],
+    "exclusions": [
+      "Pre-existing conditions within 90 days",
+      "Self-inflicted injuries",
+      "Alcohol/drug-related conditions"
+    ],
+    "waiting_period": "90-day waiting period after issue",
+    "renewable": true,
+    "convertible": false,
+    "covered_conditions": 26,
+    "premium_range": "$30-$200/month typical",
+    "url": "https://www.sunlife.ca/en/insurance/critical-illness-insurance/"
+  },
+  {
+    "name": "Sun Life Disability Insurance",
+    "product_type": "disability",
+    "description": "Income replacement if you can't work due to illness or injury. Covers up to 70% of income.",
+    "min_coverage": 1000,
+    "max_coverage": 15000,
+    "coverage_unit": "monthly_benefit",
+    "features": [
+      "Own occupation coverage available",
+      "Benefits to age 65",
+      "Cost of living adjustment rider",
+      "Return to work incentive",
+      "Waiver of premium while disabled"
+    ],
+    "exclusions": [
+      "Pre-existing conditions (12-month lookback)",
+      "Self-inflicted injuries",
+      "War or act of war",
+      "Incarceration"
+    ],
+    "waiting_period": "30, 60, 90, or 120 day elimination period",
+    "renewable": true,
+    "convertible": false,
+    "premium_range": "$50-$300/month typical",
+    "url": "https://www.sunlife.ca/en/insurance/disability-insurance/"
+  }
+]

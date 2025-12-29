@@ -1,0 +1,8 @@
+[project]
+name = "insurance-aggregator-poc"
+version = "0.1.0"
+description = "AI-native insurance comparison demo"
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 100

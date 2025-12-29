@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Manulife Term Life",
+    "product_type": "term_life",
+    "description": "Flexible term life insurance with competitive rates. Terms from 10 to 40 years.",
+    "min_coverage": 25000,
+    "max_coverage": 25000000,
+    "features": [
+      "Terms: 10, 15, 20, 25, 30, 35, or 40 years",
+      "Renewable to age 80",
+      "Exchange to permanent insurance option",
+      "Terminal illness benefit",
+      "Vitality program discounts available"
+    ],
+    "exclusions": [
+      "Suicide within first 2 years",
+      "Material misrepresentation"
+    ],
+    "waiting_period": "None for death benefit",
+    "renewable": true,
+    "convertible": true,
+    "premium_range": "$12-$140/month typical",
+    "url": "https://www.manulife.ca/personal/insurance/life-insurance.html"
+  },
+  {
+    "name": "Manulife Performax Gold",
+    "product_type": "whole_life",
+    "description": "Participating whole life insurance with potential dividends and guaranteed values.",
+    "min_coverage": 50000,
+    "max_coverage": 10000000,
+    "features": [
+      "Guaranteed death benefit",
+      "Guaranteed cash values",
+      "Participating - eligible for dividends",
+      "Multiple premium payment options",
+      "Tax-advantaged growth"
+    ],
+    "exclusions": [
+      "Suicide within first 2 years",
+      "Fraudulent claims"
+    ],
+    "waiting_period": "None",
+    "renewable": false,
+    "convertible": false,
+    "premium_range": "$120-$600/month typical",
+    "url": "https://www.manulife.ca/personal/insurance/life-insurance/permanent-insurance.html"
+  },
+  {
+    "name": "Manulife Critical Illness",
+    "product_type": "critical_illness",
+    "description": "Financial protection against serious illness with 25 covered conditions.",
+    "min_coverage": 10000,
+    "max_coverage": 2500000,
+    "features": [
+      "25 covered conditions",
+      "Early-stage cancer coverage option",
+      "Return of premium options",
+      "Children's benefit rider",
+      "Best Doctors service included"
+    ],
+    "exclusions": [
+      "Pre-existing conditions (90 days)",
+      "Self-inflicted conditions",
+      "Alcohol/drug abuse related"
+    ],
+    "waiting_period": "90-day waiting period",
+    "renewable": true,
+    "convertible": false,
+    "covered_conditions": 25,
+    "premium_range": "$25-$180/month typical",
+    "url": "https://www.manulife.ca/personal/insurance/critical-illness.html"
+  },
+  {
+    "name": "Manulife Disability Income",
+    "product_type": "disability",
+    "description": "Replace your income if injury or illness prevents you from working.",
+    "min_coverage": 500,
+    "max_coverage": 20000,
+    "coverage_unit": "monthly_benefit",
+    "features": [
+      "Own occupation definition available",
+      "Benefits to age 65 or 70",
+      "Residual disability benefits",
+      "Future insurability option",
+      "Premium waiver during claim"
+    ],
+    "exclusions": [
+      "Pre-existing conditions",
+      "Self-inflicted injuries",
+      "War or terrorism",
+      "Commission of a crime"
+    ],
+    "waiting_period": "30, 60, 90, 120, or 180 day options",
+    "renewable": true,
+    "convertible": false,
+    "premium_range": "$40-$280/month typical",
+    "url": "https://www.manulife.ca/personal/insurance/disability-insurance.html"
+  }
+]

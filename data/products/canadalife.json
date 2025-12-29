@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Canada Life Term Insurance",
+    "product_type": "term_life",
+    "description": "Affordable term coverage with flexible options. Available in 10, 20, or 30-year terms.",
+    "min_coverage": 50000,
+    "max_coverage": 15000000,
+    "features": [
+      "10, 20, or 30 year terms",
+      "Renewable without evidence",
+      "Convertible to permanent",
+      "Terminal illness advance",
+      "Premium discount for healthy lifestyle"
+    ],
+    "exclusions": [
+      "Suicide within first 2 years",
+      "Misrepresentation on application"
+    ],
+    "waiting_period": "None",
+    "renewable": true,
+    "convertible": true,
+    "premium_range": "$18-$160/month typical",
+    "url": "https://www.canadalife.com/insurance/life-insurance/term-life-insurance.html"
+  },
+  {
+    "name": "Canada Life Whole Life",
+    "product_type": "whole_life",
+    "description": "Permanent protection with guaranteed values that last your lifetime.",
+    "min_coverage": 25000,
+    "max_coverage": 5000000,
+    "features": [
+      "Lifetime guaranteed coverage",
+      "Builds cash value",
+      "Potential for dividends",
+      "Paid-up insurance option",
+      "Policy loans available"
+    ],
+    "exclusions": [
+      "Suicide within contestability period",
+      "Material misrepresentation"
+    ],
+    "waiting_period": "None",
+    "renewable": false,
+    "convertible": false,
+    "premium_range": "$110-$550/month typical",
+    "url": "https://www.canadalife.com/insurance/life-insurance/whole-life-insurance.html"
+  },
+  {
+    "name": "Canada Life Critical Illness",
+    "product_type": "critical_illness",
+    "description": "Lump sum benefit for 24 covered critical illnesses.",
+    "min_coverage": 10000,
+    "max_coverage": 2000000,
+    "features": [
+      "24 covered conditions",
+      "Partial benefits for early detection",
+      "Return of premium option",
+      "Best Doctors service",
+      "Guaranteed renewal"
+    ],
+    "exclusions": [
+      "Pre-existing conditions within 90 days",
+      "Self-inflicted conditions",
+      "Drug/alcohol related"
+    ],
+    "waiting_period": "90-day survival period",
+    "renewable": true,
+    "convertible": false,
+    "covered_conditions": 24,
+    "premium_range": "$35-$210/month typical",
+    "url": "https://www.canadalife.com/insurance/critical-illness-insurance.html"
+  },
+  {
+    "name": "Canada Life Disability Insurance",
+    "product_type": "disability",
+    "description": "Income protection if you become disabled and cannot work.",
+    "min_coverage": 1000,
+    "max_coverage": 15000,
+    "coverage_unit": "monthly_benefit",
+    "features": [
+      "Own occupation coverage",
+      "Benefits to age 65",
+      "Cost of living adjustment",
+      "Rehabilitation benefits",
+      "Premium waiver"
+    ],
+    "exclusions": [
+      "Pre-existing conditions",
+      "Self-inflicted injury",
+      "War or military service",
+      "Criminal acts"
+    ],
+    "waiting_period": "30, 60, 90, or 120 days",
+    "renewable": true,
+    "convertible": false,
+    "premium_range": "$55-$300/month typical",
+    "url": "https://www.canadalife.com/insurance/disability-insurance.html"
+  }
+]
