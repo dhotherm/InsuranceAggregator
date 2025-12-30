@@ -73,6 +73,8 @@ orchestrator = get_orchestrator()
 # Initialize session state
 if "messages" not in st.session_state:
     st.session_state.messages = []
+if "pending_query" not in st.session_state:
+    st.session_state.pending_query = None
 
 # Sidebar
 with st.sidebar:
@@ -81,29 +83,19 @@ with st.sidebar:
     st.markdown("**Click to load pre-built queries:**")
 
     if st.button("📊 Life Stage Analysis", use_container_width=True):
-        query = "I'm 38 years old, married with two kids. We just bought a house with a $500,000 mortgage. My household income is about $150,000. What insurance should I have?"
-        st.session_state.messages.append({"role": "user", "content": query})
-        st.rerun()
+        st.session_state.pending_query = "I'm 38 years old, married with two kids. We just bought a house with a $500,000 mortgage. My household income is about $150,000. What insurance should I have?"
 
     if st.button("💰 Compare Term Life Quotes", use_container_width=True):
-        query = "Get me term life insurance quotes from all three carriers for $500,000 coverage. I'm 35, non-smoker, male."
-        st.session_state.messages.append({"role": "user", "content": query})
-        st.rerun()
+        st.session_state.pending_query = "Get me term life insurance quotes from all three carriers for $500,000 coverage. I'm 35, non-smoker, male."
 
     if st.button("🔍 Critical Illness Deep Dive", use_container_width=True):
-        query = "Compare critical illness insurance across Sun Life, Manulife and Canada Life. What conditions are covered by each? Any significant differences in coverage?"
-        st.session_state.messages.append({"role": "user", "content": query})
-        st.rerun()
+        st.session_state.pending_query = "Compare critical illness insurance across Sun Life, Manulife and Canada Life. What conditions are covered by each? Any significant differences in coverage?"
 
     if st.button("📋 Policy Exclusions", use_container_width=True):
-        query = "What are the main exclusions in Sun Life's term life policy versus Manulife's? What wouldn't be covered?"
-        st.session_state.messages.append({"role": "user", "content": query})
-        st.rerun()
+        st.session_state.pending_query = "What are the main exclusions in Sun Life's term life policy versus Manulife's? What wouldn't be covered?"
 
     if st.button("🎯 Coverage Gap Analysis", use_container_width=True):
-        query = "I currently have group life insurance through work ($200K) and basic health coverage. I'm 42, married, one child, rent an apartment. Income is $95,000. What am I missing?"
-        st.session_state.messages.append({"role": "user", "content": query})
-        st.rerun()
+        st.session_state.pending_query = "I currently have group life insurance through work ($200K) and basic health coverage. I'm 42, married, one child, rent an apartment. Income is $95,000. What am I missing?"
 
     st.divider()
 
@@ -133,6 +125,29 @@ with st.sidebar:
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
+
+# Process pending query from button clicks
+if st.session_state.pending_query:
+    prompt = st.session_state.pending_query
+    st.session_state.pending_query = None
+
+    # Add user message
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    with st.chat_message("user"):
+        st.markdown(prompt)
+
+    # Get response
+    with st.chat_message("assistant"):
+        with st.spinner("Researching across carriers..."):
+            try:
+                response = orchestrator.process(prompt)
+                st.markdown(response)
+            except Exception as e:
+                response = f"Error: {str(e)}\n\nPlease check that ANTHROPIC_API_KEY is set in your environment."
+                st.error(response)
+
+    # Add assistant message
+    st.session_state.messages.append({"role": "assistant", "content": response})
 
 # Chat input
 if prompt := st.chat_input("Ask about insurance products, get quotes, or analyze your coverage needs..."):
